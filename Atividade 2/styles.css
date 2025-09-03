@@ -1,0 +1,252 @@
+:root{
+  --azul: #6d82e0;
+  --azul-escuro: #051147;
+  --violeta-fundo: #6a0dad;
+  --violeta-card: #2f004f;
+  --cinza-texto: #e0e0e0;
+  --sombra: rgba(0,0,0,0.7);
+}
+
+/* Texto (font-family, line-height, letter-spacing, text-transform) */
+body {
+  background-color: var(--violeta-fundo);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  color: var(--cinza-texto);
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+/* Header com flexbox + position relativo para a badge absoluta */
+header {
+  background-color: #000000dd; /* preto com transparência */
+  padding: 20px 40px;
+  position: relative; /* permite posicionar .badge */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+header h1 {
+  color: var(--azul);
+  font-size: 3rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #6c7396;
+}
+
+/* Badge absoluta (position + z-index) */
+.badge{
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: linear-gradient(45deg, #ffb703, #ff6f00);
+  color: #0b0b0b;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  z-index: 2; /* demonstra sobreposição */
+}
+
+/* Nav sticky com z-index alto (requisito position + z-index) */
+nav {
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 5px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #6374c0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, border-bottom-color .3s ease;
+  padding: 4px 2px; /* dá área de foco/hover */
+}
+
+/* Pseudo-classes: :hover e :focus visíveis */
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ffffff;
+  border-bottom: 2px solid #6374c0;
+  outline: none;
+}
+
+/* Seções */
+section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px 20px;
+  background-color: var(--violeta-card);
+  border-radius: 15px;
+  box-shadow: 0 0 15px #4b0082;
+  position: relative; /* base para elementos absolutos, se necessário */
+}
+
+/* Títulos */
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2.destaques {
+  color: orange;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Imagens nas seções - tamanho e estilo */
+article img {
+  display: block; /* demonstra block */
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 15px 0 25px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* ===== Demonstração de display: inline / inline-block ===== */
+
+/* "tags" com inline-block */
+.tags{
+  margin: 10px 0 20px;
+}
+.tag{
+  display: inline-block;            /* inline-block exigido */
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  border: 1px solid #cbd2f0;
+  border-radius: 999px;
+  font-size: .9rem;
+  background: #20003a;
+}
+
+/* Lista com itens em inline-block */
+.lista-inline{
+  padding-left: 0;
+  margin: 14px 0 6px 0;
+  list-style: none;
+}
+.lista-inline li{
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 8px 8px 0;
+  border: 1px dashed #cbd2f0;
+  border-radius: 8px;
+  font-size: .95rem;
+}
+
+/* ===== Destaques com GRID (requisito) ===== */
+#Destaques { 
+  /* container mantém espaçamentos globais */
+}
+
+/* Grid responsivo para os cards */
+.grid-cards{
+  display: grid;                                    /* GRID exigido */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;                                        /* gap do grid */
+  align-items: stretch;
+}
+
+/* Card com sombra e borda */
+.card{
+  background: #1c0031;
+  border: 1px solid #3f1c64;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* Pseudo-classes adicionais */
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+
+/* Exemplo de :nth-child (pares/ímpares) */
+.grid-cards .card:nth-child(odd){
+  border-color: #6d82e0;
+}
+
+/* Texto do card */
+.card-texto{
+  margin: 8px 0 0;
+  font-size: .98rem;
+  color: #d7d9ff;
+}
+
+/* Imagem centralizada dentro do card */
+.card img{
+  margin: 10px auto 14px auto;
+}
+
+/* Footer */
+footer {
+  background-color: #000000dd;
+  text-align: center;
+  padding: 30px 10px;
+  color: var(--azul-escuro);
+  font-weight: 600;
+  margin-top: 60px;
+  border-top: 2px solid var(--azul-escuro);
+}
+
+footer a {
+  color: var(--azul-escuro);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, text-decoration-color .3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Separadores */
+hr {    
+  border: none;
+  height: 3px;
+  background-color: #cbd2f0;
+  margin: 40px 0;
+}
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corvinal | Harry Potter | WIKI</title>
+
+  <!-- CSS interno-->
+  <style>
+    /* Internal CSS para o título Destaques */
+    h2.destaques {
+      color: orange;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header>
+    <!-- Badge posicionado com position + z-index-->
+    <span class="badge">Wiki Fan</span>
+
+    <div class="header-content">
+      <h1>Corvinal</h1>
+      <img src="./assets/corvinal.webp" alt="Símbolo da Corvinal" />
+    </div>
+  </header>
+
+  <!-- Nav sticky-->
+  <nav>
+    <ul>
+      <li><a href="#Resumo">Resumo</a></li>
+      <li><a href="#Destaques">Destaques</a></li>
+    </ul>
+  </nav>
+  <hr />
+
+  <section>
+    <article id="Resumo">
+      <!-- Inline CSS  -->
+      <h2 style="color: blue;">Resumo</h2>
+      <p>
+        A Corvinal, fundada por Rowena Ravenclaw, é uma das quatro casas da Escola de Magia e Bruxaria de Hogwarts.
+        <br />Seus membros, comumente, são caracterizados por sua inteligência, aprendizado e sabedoria.
+        <br />Suas cores são o azul e bronze, o animal emblemático é uma águia e sua fantasma patrono é a Dama Cinzenta.
+        <br />A casa possui um diretor notável, o Mestre de Feitiços Fílio Flitwick.
+        <br />A casa corresponde aproximadamente ao elemento ar, e é por essa razão que suas
+        <br />cores foram escolhidas; o azul representa o céu e o bronze pode representar as penas de uma águia.
+      </p>
+
+      <h2>Rowena Ravenclaw</h2>
+      <img src="./assets/Rowera.webp" alt="Rowena Ravenclaw" />
+
+      <!-- Demonstração de display inline/inline-block-->
+      <div class="tags">
+        <span class="tag">Inteligência</span>
+        <span class="tag">Criatividade</span>
+        <span class="tag">Sabedoria</span>
+        <span class="tag">Originalidade</span>
+      </div>
+
+      <!-- Demonstração de lista com itens em inline-block -->
+      <ul class="lista-inline">
+        <li>Azul</li>
+        <li>Bronze</li>
+        <li>Águia</li>
+        <li>Dama Cinzenta</li>
+      </ul>
+    </article>
+
+    <hr />
+
+    <article id="Destaques">
+      <!-- Título com internal CSS via classe -->
+      <h2 class="destaques">Destaques</h2>
+
+      <!-- Grade com CSS Grid -->
+      <div class="grid-cards">
+        <article class="card">
+          <h3>Helena Ravenclaw</h3>
+          <img src="./assets/helena.webp" alt="Helena Ravenclaw" />
+          <p class="card-texto">
+            Também conhecida como Dama Cinzenta, é o fantasma da Corvinal.
+          </p>
+        </article>
+
+        <article class="card destaque-odd">
+          <h3>Luna Lovegood</h3>
+          <img src="./assets/genericos.webp" alt="Luna Lovegood" />
+          <p class="card-texto">
+            Aluna icônica da Corvinal, curiosa e de mente aberta.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Fílio Flitwick</h3>
+          <img src="./assets/genericos.webp" alt="Fílio Flitwick" />
+          <p class="card-texto">
+            Mestre de Feitiços e diretor da casa, pequeno em estatura e grande em magia.
+          </p>
+        </article>
+
+        <article class="card destaque-odd">
+          <h3>Rowena Ravenclaw</h3>
+          <img src="./assets/genericos.webp" alt="Rowena Ravenclaw" />
+          <p class="card-texto">
+            Fundadora da casa, símbolo de inteligência e criatividade.
+          </p>
+        </article>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <h1>Para conhecer mais sobre a casa</h1>
+    <h1><a href="https://harrypotter.fandom.com/wiki/Ravenclaw" target="_blank">Harry Potter | Wiki</a></h1>
+  </footer>
+</body>
+</html>
