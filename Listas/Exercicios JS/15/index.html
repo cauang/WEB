@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+  <p id="msg">Questao 15</p>
+    <p>   
+    Implemente uma busca em um array de objetos utilizando o método
+    find() para encontrar o primeiro produto com preço maior que 50.
+    Crie um array de objetos e use find() para localizar o primeiro produto com
+    preço superior a 50.
+
+    </p>
+
+
+  <script>
+        const produtos = [
+        { nome: 'Cabo', preco: 25 },
+        { nome: 'Fone', preco: 49.9 },
+        { nome: 'Mouse', preco: 79.9 },
+        { nome: 'Teclado', preco: 120 }
+        ];
+
+        const caro = produtos.find(p => p.preco > 50);
+        console.log(caro);
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <p>Questao 17</p>
+    <p>   
+        Crie uma requisição assíncrona utilizando fetch() para buscar dados de
+        uma API externa e exibi-los na tela.
+        Desenvolva um código que faça uma requisição a uma API pública, como
+        JSONPlaceholder, e mostre o nome de um usuário na página.
+    </p>
+
+    <div id="user">Carregando...</div>
+  <script>
+      fetch('https://jsonplaceholder.typicode.com/users/1')
+          .then(response => response.json())
+          .then(data => {
+              const userName = data.name;
+              const userElement = document.getElementById('user');
+              userElement.textContent = `Nome do usuário: ${userName}`;
+              userElement.style.color = 'red';
+          })
+          .catch(error => console.error('Erro ao buscar dados:', error));
+  </script>
+</body>
+</html>

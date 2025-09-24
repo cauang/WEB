@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <p>Questao 11</p>
+    <p>   
+        Crie um código que altere o conteúdo de um parágrafo na página HTML
+        ao clicar em um botão.
+        Escreva o código JavaScript necessário para manipular um elemento HTML e
+        alterar seu conteúdo ao clicar em um botão.
+    </p> 
+
+  <p id="msg">Texto original</p>
+  <button id="btn">Trocar texto</button>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', function () {
+      document.getElementById('msg').textContent = 'Texto alterado com JS!';
+      document.getElementById('msg').style.color = 'red';
+    });
+  </script>
+</body>
+</html>

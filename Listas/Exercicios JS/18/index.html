@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <p>Questao 18</p>
+    <p>   
+        Crie um exemplo de como armazenar e recuperar um objeto em JSON
+        usando LocalStorage.
+        Escreva o código para salvar um objeto como uma string JSON no
+        LocalStorage e depois recuperá-lo.
+    </p>
+
+    <div id="user">Carregando...</div>
+  <script>
+        // salvar
+        const pessoa = [ { nome: 'Cauan', idade: 21 }, { nome: 'Maria', idade: 25 }, { nome: 'João', idade: 30 }];
+        localStorage.setItem('pessoa', JSON.stringify(pessoa));
+
+        // recuperar
+        const recuperado = JSON.parse(localStorage.getItem('pessoa') || '[]');
+        console.log(recuperado);
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <p>Questao 20</p>
+        <p>   
+            Crie um relógio digital que atualiza a cada segundo usando
+            setInterval().
+        </p>
+  <h1 id="clock"></h1>
+
+  <script>
+    function atualizarRelogio() {
+      const agora = new Date();
+      const h = String(agora.getHours()).padStart(2, '0');
+      const m = String(agora.getMinutes()).padStart(2, '0');
+      const s = String(agora.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    atualizarRelogio();              // mostra na carga
+    setInterval(atualizarRelogio, 1000); // atualiza a cada segundo
+  </script>
+</body>
+</html>

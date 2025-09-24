@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    <p>Questao 19</p>
+        <p>   
+            Desenvolva um formulário simples com validação em JavaScript.
+            Crie um formulário HTML com campos obrigatórios e implemente a
+            validação para garantir que os campos sejam preenchidos corretamente
+            antes do envio.
+        </p>
+        <hr>
+  <form id="form">
+    <input type="text" id="nome" placeholder="Seu nome">
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', function (e) {
+      const nome = document.getElementById('nome').value.trim();
+      if (nome === '') {
+        e.preventDefault(); // impede envio
+        alert('Por favor, preencha o nome.');
+      }
+    });
+  </script>
+</body>
+</html>
