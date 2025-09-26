@@ -1,0 +1,37 @@
+Link: https://github.com/cauang/Proj-arquitetura-de-sistemas/tree/main/Unidade_II/Atividade_Padroes_Projetos_Criacionais
+
+Padrões de Projeto – Builder e Prototype
+ Builder
+
+Contexto:
+
+ Imagine que você precisa montar um objeto cheio de detalhes, como um hambúrguer ou até um computador.
+ Ele pode ter muitos ingredientes ou componentes, e nem todos são obrigatórios.
+
+Problema:
+
+ Se você tentar criar esse objeto usando só um construtor normal (new com um monte de parâmetros),
+ o código fica confuso, difícil de ler e complicado de manter.
+
+Solução: 
+
+O padrão Builder resolve isso criando o objeto passo a passo.
+Você vai "montando" as partes (carne, queijo, bacon...)
+de forma clara e no final chama build() para ter o objeto pronto.
+Isso deixa o código mais organizado e legível.
+
+Prototype
+
+Contexto:
+
+Pense em uma situação onde criar um objeto custa caro ou demora.
+Por exemplo, carregar uma forma gráfica em um editor, ou criar um relatório enorme.
+
+Problema:
+
+Se você precisar de várias cópias,
+recriar do zero toda hora vai gastar tempo e processamento.
+
+Solução: O padrão Prototype resolve isso permitindo clonar objetos já existentes.
+Você cria um protótipo (um objeto base) e vai gerando cópias a partir dele.
+Assim, você economiza esforço e tempo.
